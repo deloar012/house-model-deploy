@@ -1,0 +1,127 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container */
+.main {
+    width: 95%;
+    max-width: 420px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.header p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group.full {
+    grid-column: span 2;
+}
+
+/* Inputs */
+label {
+    font-size: 12px;
+    margin-bottom: 3px;
+    color: #555;
+}
+
+input, select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102,126,234,0.5);
+}
+
+/* Button */
+.predict-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.predict-btn:hover {
+    transform: scale(1.03);
+}
+
+/* Result */
+.result-box {
+    margin-top: 20px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 12px;
+    background: #f1f5ff;
+}
+
+.result-box h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+.result-box p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #667eea;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    font-size: 12px;
+}
