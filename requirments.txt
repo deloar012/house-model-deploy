@@ -1,8 +1,0 @@
-flask
-gunicorn
-numpy
-pandas
-scikit-learn
-joblib
-pickle-mixin
-python-3.10.13git
