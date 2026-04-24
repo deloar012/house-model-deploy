@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import joblib
 from flask import Flask, render_template, request
-import mysql.connector
+# import mysql.connector
 
 app = Flask(__name__)
 
@@ -15,16 +15,26 @@ flat_models = [
     "Standard", "Terrace", "Type S1", "Type S2"
 ]
 
-# MySQL connection
-db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="deloar8172",
-    database="house_price_db"
-)
-cursor = db.cursor()
+import mysql.connector
+from mysql.connector import Error
 
+# db = None
+# cursor = None
 
+# try:
+#     db = mysql.connector.connect(
+#         host="localhost",
+#         user="deloar",
+#         password="deloar8172",
+#         database="house_price_db"
+#     )
+#     cursor = db.cursor()
+#     print("✅ DB connected successfully")
+
+# except Error as e:
+#     print("⚠️ DB connection failed:", e)
+#     db = None
+#     cursor = None
 @app.route("/")
 def home():
     return render_template("index.html", models=flat_models)
@@ -92,8 +102,8 @@ def predict():
             float(pred_price)
         )
 
-        cursor.execute(sql, values)
-        db.commit()
+        # cursor.execute(sql, values)
+        # db.commit()
 
         return render_template(
             "index.html",
